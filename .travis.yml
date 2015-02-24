@@ -9,12 +9,20 @@ install:
 - export TZ='Europe/London'
 - export BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
 - export BUILD_VCS_NUMBER=$TRAVIS_COMMIT
-script: ./dist-root-tc
+script: "./dist-root-tc"
 after_script: ls -la
-cache:
+cache: 
 bundler: true
 directories:
 - node_modules
 - ivy-sbt
-- $HOME/.rbenv
+- "$HOME/.rbenv"
 - facia-tool/public/jspm_packages
+env:
+  global:
+    secure: EzVDUtPCh8w/d15wL7y8pFQLcxZbBUwuJC0LMn4io3aIJnvdVh74ZPaShRi3QxjZQhlF53hFFlBCu1ojo5X2v0a8P8KdxBZDPLF/0pVRY/YZjWgLxez3PrkjU13LqMRLsqevL3oAoQDyoi9tgKlWpMZpERPLsZA+ZC6Wo0JheXo=
+before_install:
+- openssl aes-256-cbc -K $encrypted_8a811047b80c_key -iv $encrypted_8a811047b80c_iv
+  -in jspmconfig.enc -out jspmconfig -d
+- mkdir $HOME/.jspm
+- mv jspmconfig $HOME/.jspm/config
