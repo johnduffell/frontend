@@ -8,3 +8,8 @@ install:
 - export PATH="`pwd`/rbenv/bin:`pwd`/rbenv/plugins/ruby-build/bin:$PATH"
 script: ./dist-root-tc
 after_script: ls -la
+cache:
+bundler: true
+directories:
+- node_modules
+- ivy-sbt
