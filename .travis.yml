@@ -1,6 +1,8 @@
 language: scala
 scala:
 - 2.10.3
+jdk:
+  - oraclejdk8
 sudo: false
 install:
 - git clone https://github.com/sstephenson/rbenv.git rbenv
@@ -9,7 +11,7 @@ install:
 - export TZ='Europe/London'
 - export BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
 - export BUILD_VCS_NUMBER=$TRAVIS_COMMIT
-script: "./dist-root-tc"
+script: "./dist-root-travis"
 after_script: ls -la
 cache: 
 bundler: true
