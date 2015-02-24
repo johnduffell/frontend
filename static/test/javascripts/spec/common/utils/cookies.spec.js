@@ -59,7 +59,7 @@ define([
         it('should be able to set a cookie', function () {
             cookies.add('cookie-1-name', 'cookie-1-value');
             expect(mockDocument.cookie).toMatch(
-                'cookie-1-name=cookie-1-value; path=/; expires=Sun, 31 May 1970 23:00:00 GMT; domain=.theguardian.com'
+                'cookie-1-name=cookie-1-value; path=/; expires=Mon, 01 Jun 1970 00:00:00 GMT; domain=.theguardian.com'
             );
             clock.restore();
         });
