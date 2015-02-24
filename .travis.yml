@@ -4,7 +4,7 @@ scala:
 sudo: false
 install:
 - git clone https://github.com/sstephenson/rbenv.git rbenv
-- export PATH="`pwd`/rbenv/bin:$PATH"
 - git clone https://github.com/sstephenson/ruby-build.git rbenv/plugins/ruby-build
+- export PATH="`pwd`/rbenv/bin:`pwd`/rbenv/plugins/ruby-build/bin:$PATH"
 script: ./dist-root-tc
 after_script: ls -la
