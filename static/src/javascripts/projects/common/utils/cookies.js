@@ -30,13 +30,15 @@ define([
     function add(name, value, daysToLive) {
 
         var expires = new Date();
+        console.log("epoch", expires, expires.toUTCString(), expires.toString());
 
         if (daysToLive) {
             expires.setDate(expires.getDate() + daysToLive);
         } else {
             expires.setUTCMonth(expires.getUTCMonth() + 5);
-            expires.setDate(1);
+            expires.setUTCDate(1);
         }
+        console.log("modified", expires, expires.toUTCString(), expires.toString());
 
         getDocument().cookie =
             name + '=' + value + '; path=/; expires=' + expires.toUTCString() + ';' + getDomainAttribute();
