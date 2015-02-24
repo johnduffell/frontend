@@ -6,6 +6,7 @@ install:
 - git clone https://github.com/sstephenson/rbenv.git rbenv
 - git clone https://github.com/sstephenson/ruby-build.git rbenv/plugins/ruby-build
 - export PATH="`pwd`/rbenv/bin:`pwd`/rbenv/plugins/ruby-build/bin:$PATH"
+- export TZ='Europe/London'
 script: ./dist-root-tc
 after_script: ls -la
 cache:
