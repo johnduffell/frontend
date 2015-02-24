@@ -13,3 +13,4 @@ bundler: true
 directories:
 - node_modules
 - ivy-sbt
+- rbenv
