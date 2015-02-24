@@ -34,7 +34,7 @@ define([
         if (daysToLive) {
             expires.setDate(expires.getDate() + daysToLive);
         } else {
-            expires.setMonth(expires.getMonth() + 5);
+            expires.setUTCMonth(expires.getUTCMonth() + 5);
             expires.setDate(1);
         }
 
