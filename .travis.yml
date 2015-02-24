@@ -5,5 +5,6 @@ sudo: false
 install:
 - git clone https://github.com/sstephenson/rbenv.git rbenv
 - export PATH="`pwd`/rbenv/bin:$PATH"
+- git clone https://github.com/sstephenson/ruby-build.git rbenv/plugins/ruby-build
 script: ./dist-root-tc
 after_script: ls -la
