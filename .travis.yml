@@ -2,3 +2,5 @@ language: scala
 scala:
 - 2.10.3
 sudo: false
+script: ./dist-root-tc
+after_script: ls -la
