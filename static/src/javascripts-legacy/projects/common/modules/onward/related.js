@@ -9,7 +9,10 @@ define([
     'common/modules/ui/expandable',
     'common/modules/experiments/ab',
     'lodash/arrays/intersection',
-    'lodash/collections/map'
+    'lodash/collections/map',
+    'lodash/utilities/template',
+    'lodash/collections/forEach',
+    'raw-loader!common/views/theTemplate.html'
 ], function (
     bonzo,
     qwery,
@@ -21,7 +24,10 @@ define([
     Expandable,
     ab,
     intersection,
-    map
+    map,
+    template,
+    forEach,
+    theTemplate
 ) {
 
     var opts;
@@ -89,10 +95,9 @@ define([
                     container: container,
                     beforeInsert: function (resp) {
                         // resp is the json response, need to return some dom
-                        var p = document.createElement('h1');
-                        console.log('wow');
-                        p.appendChild(document.createTextNode('hahaha'));
-                        return p;
+                        resp.forEach = forEach;
+                        var templatedContent = bonzo.create(template(theTemplate, resp));
+                        return templatedContent;
                     },
                     success: function () {
 
