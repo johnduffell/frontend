@@ -3,8 +3,8 @@
     <% forEach(articles, function(article) { %>
     <div class="challenge__article">
         <a href="<%=article.link%>">
-            <p class="challenge__source">From <%=article.source%></p>
-            <img class="challenge__image" width="100" src="<%=article.imageUrl%>">
+            <p class="challenge__source">From <%=article.altSrc%></p>
+            <img class="challenge__image" width="100" src="<%=article.image%>">
             <p class="challenge__headline"><%=article.headline%></p>
         </a>
     </div>
