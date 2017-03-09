@@ -86,11 +86,13 @@ define([
 
                 relatedUrl = 'http://localhost:8000/burst-the-bubble.json';
 
-                if (opts.excludeTags && opts.excludeTags.length) {
-                    relatedUrl += '?' + map(opts.excludeTags, function (tag) {
-                            return 'exclude-tag=' + tag;
-                        }).join('&');
-                }
+                var params = {
+                    "q": config.page.webTitle
+                };
+
+                relatedUrl += '?' + Object.keys(params).map(function(key, index) {
+                        return encodeURI(key) + '=' + encodeURI(params[key]);
+                    }).join('&');
 
                 lazyload({
                     url: relatedUrl,
