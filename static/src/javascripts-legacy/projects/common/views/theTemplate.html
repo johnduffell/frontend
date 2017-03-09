@@ -27,13 +27,18 @@
     }
 </style>
 
+<!--TODO-->
+<!--subtitle: You might be interested in what other people say -->
+<!--open in new window-->
+<!--logo-->
+
 <div class="fc-container">
     <div class="challenge fc-container__inner">
         <h2 class="challenge__title fc-container__header__title">challenge your point of view</h2>
         <ul class="challenge__articles u-unstyled l-row  l-row--cols-4">
         <% forEach(articles.slice(0, 4), function(article) { %>
             <li class="challenge__article l-row__item l-row__item--span-1">
-                <a href="<%=article.link%>">
+                <a href="<%=article.link%>" target="_blank">
                     <p class="challenge__source"><span class="challenge__source__from">From</span>
                         <span class="challenge__source__source"><%=article.altSrc%></span></p>
                     <div class="u-responsive-ratio">
