@@ -5,7 +5,6 @@
         padding: 10px;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-height: 150px;
     }
 
     .challenge__image {
@@ -44,7 +43,7 @@
                     <div class="u-responsive-ratio">
                         <img class="challenge__image" src="<%=article.image%>">
                     </div>
-                    <p class="challenge__headline"><%=article.headline%></p>
+                    <p class="challenge__headline item__title"><%=article.headline%></p>
                 </a>
             </li>
         <% }) %>
