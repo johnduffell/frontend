@@ -1,0 +1,22 @@
+{
+    "articles": [
+        {
+            "altSrc": "The Times",
+            "headline": "Hammond’s £2bn tax raid",
+            "image": "http://feeds.thetimes.co.uk/web/imageserver/imageserver/image/methode%2Ftimes%2Fprod%2Fweb%2Fbin%2F656d7636-0452-11e7-ae09-71f14792998a.jpg?crop=1485,835,6,4&resize=1200",
+            "link": "http://www.thetimes.co.uk/edition/news/hammonds-2bn-tax-raid-g5sz898sn"
+        },
+        {
+            "altSrc": "The Telegraph",
+            "headline": "The Budget: Philip Hammond blames broken Tory tax promise on Brexit as Iain Duncan Smith joins revolt ",
+            "image": "http://www.telegraph.co.uk/content/dam/news/2017/03/09/JS122904966_hammond-large_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwX31GXWMUrSmJ3_xsz5UQg4.jpg",
+            "link": "http://www.telegraph.co.uk/news/2017/03/09/philip-hammond-refuses-back-national-insurance-rise-fury-grows/"
+        },
+        {
+            "altSrc": "BBC",
+            "headline": "Hammond: Budget National Insurance rise due to 'new challenges'",
+            "image": "http://ichef.bbci.co.uk/images/ic/1024x576/p04w8t4t.jpg",
+            "link": "http://www.bbc.co.uk/news/uk-politics-39213349"
+        }
+    ]
+}
