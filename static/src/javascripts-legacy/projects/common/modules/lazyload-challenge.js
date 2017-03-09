@@ -35,7 +35,6 @@ define([
         }, options);
 
         if (options.url && options.container) {
-            console.log('lazyload');
             var $container = bonzo(options.container);
             if (options.force || !$container.hasClass('lazyloaded')) {
                 return ajax({
