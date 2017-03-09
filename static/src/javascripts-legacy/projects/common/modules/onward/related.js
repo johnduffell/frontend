@@ -89,12 +89,27 @@ define([
                         return encodeURI(key) + '=' + encodeURI(params[key]);
                     }).join('&');
 
+                var logos = {
+                    "bbc.co.uk": "https://www.bbc.co.uk/logo.png",
+                    "telegraph.co.uk": "https://www.telegraph.co.uk/logo.png"
+                };
+
                 lazyload({
                     url: relatedUrl,
                     container: container,
                     beforeInsert: function (resp) {
                         // resp is the json response, need to return some dom
                         resp.forEach = forEach;
+                        resp.articles.forEach(function (article) {
+                            console.log('article.link', article.link);
+                            Object.keys(logos).forEach(function (logo) {
+                                console.log('logo', logo);
+                                if (article.link.includes(logo)) {
+                                    console.log('yes');
+                                    article.logo = logos[logo];
+                                }
+                            });
+                        });
                         var templatedContent = bonzo.create(template(theTemplate, resp));
                         return templatedContent;
                     },
