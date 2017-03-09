@@ -1,16 +1,7 @@
 <style>
 
-    .challenge__articles {
-        display: flex;
-    }
-
-    .challenge__title {
-        margin: 0 10px;
-    }
-
     .challenge__headline {
         color: black;
-        font-weight: bolder;
         padding: 10px;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -31,7 +22,6 @@
     }
 
     .challenge__article {
-        flex: 1;
         margin: 10px;
         background: #f6f6f6;
     }
@@ -40,19 +30,19 @@
 <div class="fc-container">
     <div class="challenge fc-container__inner">
         <h2 class="challenge__title fc-container__header__title">challenge your point of view</h2>
-        <div class="challenge__articles">
+        <ul class="challenge__articles u-unstyled l-row  l-row--cols-4">
         <% forEach(articles.slice(0, 4), function(article) { %>
-        <div class="challenge__article">
-            <a href="<%=article.link%>">
-                <p class="challenge__source"><span class="challenge__source__from">From</span>
-                    <span class="challenge__source__source"><%=article.altSrc%></span></p>
-                <div class="u-responsive-ratio">
-                    <img class="challenge__image" src="<%=article.image%>">
-                </div>
-                <p class="challenge__headline"><%=article.headline%></p>
-            </a>
-        </div>
+            <li class="challenge__article l-row__item l-row__item--span-1">
+                <a href="<%=article.link%>">
+                    <p class="challenge__source"><span class="challenge__source__from">From</span>
+                        <span class="challenge__source__source"><%=article.altSrc%></span></p>
+                    <div class="u-responsive-ratio">
+                        <img class="challenge__image" src="<%=article.image%>">
+                    </div>
+                    <p class="challenge__headline"><%=article.headline%></p>
+                </a>
+            </li>
         <% }) %>
-        </div>
+        </ul>
     </div>
 </div>
