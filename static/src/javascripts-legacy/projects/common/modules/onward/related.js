@@ -5,7 +5,7 @@ define([
     'lib/config',
     'lib/mediator',
     'common/modules/analytics/register',
-    'common/modules/lazyload',
+    'common/modules/lazyload-challenge',
     'common/modules/ui/expandable',
     'common/modules/experiments/ab',
     'lodash/arrays/intersection',
@@ -76,7 +76,7 @@ define([
 
                 container.setAttribute('data-component', componentName);
 
-                relatedUrl = popularInTag || '/related/' + config.page.pageId + '.json';
+                relatedUrl = 'http://localhost:8000/burst-the-bubble.json';
 
                 if (opts.excludeTags && opts.excludeTags.length) {
                     relatedUrl += '?' + map(opts.excludeTags, function (tag) {
@@ -87,6 +87,13 @@ define([
                 lazyload({
                     url: relatedUrl,
                     container: container,
+                    beforeInsert: function (resp) {
+                        // resp is the json response, need to return some dom
+                        var p = document.createElement('h1');
+                        console.log('wow');
+                        p.appendChild(document.createTextNode('hahaha'));
+                        return p;
+                    },
                     success: function () {
 
                         var relatedContainer = container.querySelector('.related-content');
