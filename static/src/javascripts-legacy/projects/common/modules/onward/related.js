@@ -90,8 +90,8 @@ define([
                     }).join('&');
 
                 var logos = {
-                    "bbc.co.uk": "https://www.bbc.co.uk/logo.png",
-                    "telegraph.co.uk": "https://www.telegraph.co.uk/logo.png"
+                    "bbc.co.uk": "http://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png?cb=1",
+                    "dailymail.co.uk": "http://i.dailymail.co.uk/i/social/img_mol-logo_50x50.png"
                 };
 
                 lazyload({
