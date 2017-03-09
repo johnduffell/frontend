@@ -30,10 +30,7 @@ define([
     theTemplate
 ) {
 
-    var opts;
-
-    function Related(options) {
-        opts = options || {};
+    function Related() {
     }
 
     Related.prototype.popularInTagOverride = function () {
@@ -88,7 +85,7 @@ define([
                     "q": config.page.webTitle
                 };
 
-                relatedUrl += '?' + Object.keys(params).map(function(key, index) {
+                relatedUrl += '?' + Object.keys(params).map(function(key) {
                         return encodeURI(key) + '=' + encodeURI(params[key]);
                     }).join('&');
 
