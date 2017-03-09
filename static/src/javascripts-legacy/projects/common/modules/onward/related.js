@@ -82,7 +82,7 @@ define([
                 relatedUrl = 'http://localhost:8000/burst-the-bubble.json';
 
                 var params = {
-                    "q": config.page.webTitle
+                    "q": config.page.keywords
                 };
 
                 relatedUrl += '?' + Object.keys(params).map(function(key) {
