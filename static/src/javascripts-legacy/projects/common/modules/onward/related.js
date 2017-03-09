@@ -9,6 +9,7 @@ define([
     'common/modules/ui/expandable',
     'common/modules/experiments/ab',
     'lodash/arrays/intersection',
+    'lodash/arrays/slice',
     'lodash/collections/map',
     'lodash/utilities/template',
     'lodash/collections/forEach',
@@ -24,6 +25,7 @@ define([
     Expandable,
     ab,
     intersection,
+    slice,
     map,
     template,
     forEach,
@@ -96,6 +98,7 @@ define([
                     beforeInsert: function (resp) {
                         // resp is the json response, need to return some dom
                         resp.forEach = forEach;
+                        resp.slice = slice;
                         var templatedContent = bonzo.create(template(theTemplate, resp));
                         return templatedContent;
                     },

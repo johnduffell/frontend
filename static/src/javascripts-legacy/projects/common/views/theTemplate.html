@@ -1,12 +1,58 @@
-<div class="challenge">
-    <h2 class="challenge__title">Challenge your point of view!</h2>
-    <% forEach(articles, function(article) { %>
+<div class="fc-container">
+<div class="challenge fc-container__inner">
+    <h2 class="challenge__title fc-container__header__title">challenge your point of view</h2>
+    <div class="challenge__articles">
+    <% forEach(slice(articles, 0, 1), function(article) { %>
     <div class="challenge__article">
         <a href="<%=article.link%>">
-            <p class="challenge__source">From <%=article.altSrc%></p>
-            <img class="challenge__image" width="100" src="<%=article.image%>">
+            <p class="challenge__source"><span class="challenge__source__from">From</span>
+                <span class="challenge__source__source"><%=article.altSrc%></span></p>
+            <div class="u-responsive-ratio">
+                <img class="challenge__image" src="<%=article.image%>">
+            </div>
             <p class="challenge__headline"><%=article.headline%></p>
         </a>
     </div>
     <% }) %>
+    </div>
 </div>
+</div>
+
+<style>
+
+    .challenge__articles {
+        display: flex;
+    }
+
+    .challenge__title {
+ margin: 0 10px;
+    }
+
+    .challenge__headline {
+        color: black;
+        font-weight: bolder;
+        padding: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 150px;
+    }
+
+    .challenge__image {
+    }
+
+    .challenge__source {
+        padding: 10px;
+        color: black;
+        margin: 0;
+    }
+
+    .challenge__source__source {
+        font-style: oblique;
+    }
+
+    .challenge__article {
+        flex: 1;
+        margin: 10px;
+        background: #f6f6f6;
+    }
+</style>
