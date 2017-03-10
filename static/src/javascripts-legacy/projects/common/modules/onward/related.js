@@ -79,7 +79,7 @@ define([
 
                 container.setAttribute('data-component', componentName);
 
-                relatedUrl = 'http://localhost:8000/burst-the-bubble.json';
+                relatedUrl = 'http://localhost:9001';
 
                 var params = {
                     "q": config.page.keywords
