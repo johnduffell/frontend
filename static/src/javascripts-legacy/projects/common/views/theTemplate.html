@@ -39,8 +39,9 @@
                 <a href="<%=article.link%>" target="_blank">
                     <p class="challenge__source"><span class="challenge__source__from">From</span>
                         <span class="challenge__source__source"><%=article.altSrc%></span>
-
-                    <img height="30" style="float:left;" src="<%=article.logo%>"></p>
+                    <% if(article.logo) { %>
+                        <img height="30" style="float:left;" src="<%=article.logo%>"></p>
+                    <% } %>
                     <div class="u-responsive-ratio">
                         <img class="challenge__image" src="<%=article.image%>">
                     </div>
