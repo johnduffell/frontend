@@ -36,8 +36,8 @@
 
 <div class="fc-container">
     <div class="challenge fc-container__inner">
-        <h2 class="challenge__title fc-container__header__title">challenge your point of view</h2>
-        <p class="container__meta__item">You might be interested in what other people say</p>
+        <h2 class="challenge__title fc-container__header__title">other coverage</h2>
+        <p class="container__meta__item">See how other news organisations are covering this story</p>
         <ul class="challenge__articles u-unstyled l-row  l-row--cols-4">
         <% forEach(articles.slice(0, 4), function(article) { %>
             <li class="challenge__article l-row__item l-row__item--span-1">
@@ -52,7 +52,10 @@
                     <div class="u-responsive-ratio">
                         <img class="challenge__image" src="<%=article.image%>">
                     </div>
-                    <p class="challenge__headline item__title"><%=article.headline%></p>
+                    <p class="challenge__headline item__title">
+                        <%=article.headline%>
+                        <img height="22" style="vertical-align: text-bottom" src="https://cdn1.iconfinder.com/data/icons/pixel-perfect-at-16px-volume-1/16/5006-128.png">
+                    </p>
                 </a>
             </li>
         <% }) %>
