@@ -16,6 +16,9 @@
         margin: 0;
     }
 
+    .challenge__source__from {
+    }
+
     .challenge__source__source {
         font-style: oblique;
     }
@@ -24,10 +27,12 @@
         margin: 10px;
         background: #f6f6f6;
     }
-</style>
 
-<!--TODO-->
-<!--logo-->
+    .challenge__logo {
+        vertical-align:middle;
+    }
+
+</style>
 
 <div class="fc-container">
     <div class="challenge fc-container__inner">
@@ -37,11 +42,13 @@
         <% forEach(articles.slice(0, 4), function(article) { %>
             <li class="challenge__article l-row__item l-row__item--span-1">
                 <a href="<%=article.link%>" target="_blank">
-                    <p class="challenge__source"><span class="challenge__source__from">From</span>
+                    <div class="challenge__source">
+                        <% if(article.logo) { %>
+                            <img height="30" class="challenge__logo" src="<%=article.logo%>">
+                        <% } %>
+                        <span class="challenge__source__from">From</span>
                         <span class="challenge__source__source"><%=article.altSrc%></span>
-                    <% if(article.logo) { %>
-                        <img height="30" style="float:left;" src="<%=article.logo%>"></p>
-                    <% } %>
+                    </div>
                     <div class="u-responsive-ratio">
                         <img class="challenge__image" src="<%=article.image%>">
                     </div>
